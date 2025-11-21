@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>JOJO ARCHIVE - Database Completo de Stands</title>
+</head>
+<body>
+    <!-- LANDING PAGE -->
+    <section id="landing-page" class="landing-page">
+        <div class="landing-content">
+            <div class="logo-container">
+                <h1 class="landing-title">JOJO</h1>
+                <h2 class="landing-subtitle">ARCHIVE</h2>
+            </div>
+            <p class="landing-description">
+                Explore o universo completo dos Stands mais icônicos de JoJo's Bizarre Adventure com histórias detalhadas, estatísticas e curiosidades
+            </p>
+            <div class="landing-stats">
+                <div class="stat-item">
+                    <span class="stat-number">30+</span>
+                    <span class="stat-label">Stands</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">8</span>
+                    <span class="stat-label">Partes</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">∞</span>
+                    <span class="stat-label">Aventuras</span>
+                </div>
+            </div>
+            <button id="enter-btn" class="enter-btn">
+                <span>ENTRAR NO ARQUIVO</span>
+                <div class="btn-glow"></div>
+            </button>
+            <div class="scroll-indicator">
+                <span>↓</span>
+            </div>
+        </div>
+        <div class="landing-background">
+            <div class="star star1">⭐</div>
+            <div class="star star2">✨</div>
+            <div class="star star3">💫</div>
+            <div class="star star4">⭐</div>
+            <div class="star star5">✨</div>
+        </div>
+    </section>
+
+    <!-- PÁGINA PRINCIPAL -->
+    <div id="main-content" class="main-content hidden">
+        <header>
+            <h1>「 JOJO ARCHIVE 」</h1>
+            <div class="header-controls">
+                <p class="header-subtitle">O arquivo definitivo de Stands e usuários</p>
+            </div>
+            <div class="search-filter-container">
+                <input type="text" id="search-input" placeholder="🔍 Busque por um Stand ou usuário...">
+                <div class="filter-container" id="filter-container"></div>
+            </div>
+        </header>
+
+        <main id="showcase-container"></main>
+
+        <footer>
+            <p>「 Criado por <a href="https://github.com/pfvrjeandv" target="_blank">Jean</a> com amor por JoJo 🌟 」</p>
+            <p style="margin-top: 1rem; font-size: 0.8rem;">Todos os direitos de JoJo's Bizarre Adventure pertencem a Hirohiko Araki</p>
+        </footer>
+    </div>
+
+    <!-- Player de Música -->
+    <div id="music-player" class="music-player">
+        <div class="music-player-content">
+            <div class="music-info">
+                <span class="music-icon">🎵</span>
+                <span class="music-title">JoJo Epic Theme</span>
+            </div>
+            <div class="music-controls">
+                <button id="play-pause-btn" class="control-btn">
+                    <span class="play-icon">▶</span>
+                    <span class="pause-icon hidden">⏸</span>
+                </button>
+                <div class="volume-container">
+                    <button id="volume-btn" class="control-btn volume-btn">
+                        <span class="volume-icon">🔊</span>
+                    </button>
+                    <input type="range" id="volume-slider" min="0" max="100" value="50" class="volume-slider">
+                </div>
+            </div>
+        </div>
+        <div class="music-progress">
+            <div class="progress-bar">
+                <div id="progress-fill" class="progress-fill"></div>
+            </div>
+            <div class="time-display">
+                <span id="current-time">0:00</span>
+                <span id="duration-time">0:00</span>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audio-element" loop>
+        <source src="Nova pasta/jojoepictheme.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
